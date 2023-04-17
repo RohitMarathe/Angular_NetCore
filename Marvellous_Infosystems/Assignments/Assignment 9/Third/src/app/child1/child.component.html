@@ -1,0 +1,30 @@
+<div>
+    <h1>
+        Child Component
+    </h1>
+</div>
+
+<div>
+    <h4>Insert a number in belwo text box to check it is prime or not?</h4>
+    <input type="text" #inputNumber (keyup)="CheckPrimeOrNot(inputNumber.value)" placeholder="Enter a number: ">
+
+    <br>
+
+    <div *ngIf="inputNumber.value.length > 0">
+        <span *ngIf="bStatus; else noPrime">{{iNumberPrime+" is a prime number."}}</span>
+        <ng-template #noPrime>
+            {{iNumberPrime+" is not a prime number."}}
+        </ng-template>
+    </div>
+
+    <br>
+    <br>
+
+    <h4>Insert a string in below text box to count the number of alphabets in it</h4>
+    <input type="text" #inputString (keyup)="CountAlphabets(inputString.value)" placeholder="Enter a string">
+
+    <div *ngIf="inputString.value.length > 0">
+        <span>{{"Number of Capital in the above string are: "+iNumber}}</span>
+    </div>
+
+</div>
