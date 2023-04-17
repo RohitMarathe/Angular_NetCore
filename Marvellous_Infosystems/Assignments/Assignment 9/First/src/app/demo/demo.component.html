@@ -1,0 +1,12 @@
+<h1>
+    Perform Arithmetic Operations such as Addition and Substraction
+</h1>
+
+<input #number1 type="text" placeholder="Enter a first number">
+<br> <br> <input #number2 type="text" placeholder="Enter a second number">
+<br> <br>
+
+<div>
+    <button mat-raised-button color="accent" (click)="Addition(number1.value,number2.value)">Addition</button> {{space}}
+    <button mat-raised-button color="accent" (click)="Substraction(number1.value,number2.value)">Substraction</button> <br> <br> {{"Result: "+result}}
+</div>
