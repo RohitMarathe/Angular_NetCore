@@ -1,0 +1,16 @@
+<div>
+    <h1>
+        Determine wheather number is prime or not?
+    </h1>
+</div>
+
+<input #number type="text" placeholder="Enter a number"> {{space}} {{space}}
+<button (click)="IsPrime(number.value)">Submit</button>
+
+<div *ngIf="InputNumber!=0">
+    <span *ngIf="status == true;else noPrime"> {{InputNumber}} is Prime </span>
+</div>
+
+<ng-template #noPrime>
+    <span>{{InputNumber}} is not prime</span>
+</ng-template>
