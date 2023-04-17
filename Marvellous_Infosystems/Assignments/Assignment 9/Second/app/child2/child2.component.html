@@ -1,0 +1,13 @@
+<h1>
+    Count the number of alphabets in the inserted string
+</h1>
+
+<input #input type="text" placeholder="Enter a string" (keyup)="CountNumberOfAlphabets(input.value)">
+
+<!-- "CountNumberOfAlphabets(input.value)"> -->
+{{space}}
+<!-- <button (click)="CountNumberOfAlphabets(input.value)">Count Alphabets</button> -->
+
+<div *ngIf="input.value.length > 0">
+    <span>{{"Total alphabets in the above string is: "+iCount}}</span>
+</div>
